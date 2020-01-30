@@ -7,7 +7,7 @@
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'CS321_W3D1_BookAPI_InClassProject2' ">
     <StartAction>Project</StartAction>
-    <LaunchUrl>api/values</LaunchUrl>
+    <LaunchUrl>api/books</LaunchUrl>
     <ApplicationURL>https://localhost:5003;http://localhost:5002</ApplicationURL>
   </PropertyGroup>
   <ItemGroup>
@@ -16,6 +16,12 @@
       <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Data\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
 </Project>
